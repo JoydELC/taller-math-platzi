@@ -22,7 +22,18 @@ function calcularPromedioReduce(lista){
 function esPar(lista){
     return lista.length % 2 === 0;
 };
+
+// Ordenar con sort
+function ordenarLista(listaDesordenada){
+    function ordenarListaSort(valorAcumulado,nuevoValor){
+        return valorAcumulado -nuevoValor;
+    }
+    const lista = listaDesordenada.sort(ordenarListaSort)
+    return lista
+};
+
 function calcularMediana(lista){
+    lista = ordenarLista(lista);
     const listaEsPar = esPar(lista);
     if (listaEsPar){
         let listaPar = [lista[(lista.length/2)-1],lista[(lista.length/2)]];
@@ -32,3 +43,4 @@ function calcularMediana(lista){
         return lista[(Math.floor(lista.length/2))];
     }
 };
+
