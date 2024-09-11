@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="percentages.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <title>Taller Descuento</title>
+</head>
+<body>
+    <header>
+        <h1>Cómo calcular precios con descuentos</h1>
+    </header>
+
+    <main>
+        <div class="card">
+            <label for="price">Precio Original</label>
+            <input id="price" required type="number"/>
+            <label for="coupon" >Cupon de descuento:</label>
+            <input id="coupon" required maxlength="15"  type="text">
+            <button id="calcular">Calcular descuento</button>
+            <p id="result"></p>
+            <p id="errors"></p>
+
+
+        </div>        
+    </main>
+
+    <footer></footer>
+    <script src="./cupones.js"></script>
+</body>
+</html>
