@@ -44,3 +44,31 @@ function calcularMediana(lista){
     }
 };
 
+function ordenarListaBidimensional(listaDesordenada){
+    function ordenarListaSort(valorAcumulado,nuevoValor){
+        return valorAcumulado[1] -nuevoValor[1];
+    }
+    const lista = listaDesordenada.sort(ordenarListaSort)
+    return lista
+}
+
+// Calcular la moda
+function calcularModa(lista){
+    const listaCount= {};
+
+    for (let i = 0 ; i < lista.length ; i ++){
+        const elemento = lista[i];
+        if(listaCount[elemento]){
+        listaCount[elemento] += 1;
+        } else {
+            listaCount[elemento]=1;
+        };
+    };
+    
+    const listaArray = Object.entries(listaCount);
+    const listaOrdenada = ordenarListaBidimensional(listaArray);
+    const listaMax = listaOrdenada[listaOrdenada.length - 1];
+    console.log('La moda es:' + listaMax[0]);
+    const moda = listaMax[0];
+    return moda;
+}
